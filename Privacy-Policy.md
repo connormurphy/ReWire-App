@@ -4,7 +4,7 @@ Last updated: [September 12, 2024]
 
 ## Introduction
 
-[ReWire] ("we," "our," or "us") respects your privacy and is committed to protecting it through our compliance with this policy. This policy describes our practices regarding data collection and usage for our iOS application [Your App Name] (the "App").
+[ReWire] ("we," "our," or "us") respects your privacy and is committed to protecting it through our compliance with this policy. This policy describes our practices regarding data collection and usage for our iOS application [ReWire - TSM Companion] (the "App").
 
 ## Information Collection
 
