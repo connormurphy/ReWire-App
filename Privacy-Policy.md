@@ -1,43 +1,55 @@
-# Privacy Policy for [ReWire - TSM Companion]
+# Privacy Policy for ReWire - TSM Companion
 
-Last updated: [September 12, 2024]
+**Last updated:** March 8, 2025
 
 ## Introduction
 
-[ReWire] ("we," "our," or "us") respects your privacy and is committed to protecting it through our compliance with this policy. This policy describes our practices regarding data collection and usage for our iOS application [ReWire - TSM Companion] (the "App").
+ReWire ("we," "our," or "us") respects your privacy and is committed to protecting it through our compliance with this policy. This policy describes our practices regarding data collection and usage for our iOS application ReWire - TSM Companion (the "App").
 
 ## Information Collection
 
-Our App does not collect any personal data from its users. We are committed to maintaining your privacy and ensuring that your personal information remains secure.
+Our App does not collect, transmit, or share any personal data. We have no servers, no analytics, and no tracking of any kind. We do not know who our users are or how they use the App.
 
-## Use of Information
+## Data Stored on Your Device
 
-As we do not collect any data, there is no use or processing of user information within our App.
+The App stores the following data locally on your device using Apple's Core Data framework:
 
-## Data Storage and Security
+- **Drink entries** — drink name, emoji, timestamp, ABV, size, standard units, and optional notes
+- **Medication entries** — medication name, dosage, timestamp, and optional notes
+- **Custom drinks** — user-created drink presets
+- **Alcohol-free day markers** — dates marked as alcohol-free
+- **App preferences** — display settings, country selection, and week start day
 
-Our App does not store any user data. The security of your personal information is important to us, but remember that no method of transmission over the Internet or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your personal information, we cannot guarantee its absolute security. Our App relies on the security measures provided by Apple's iOS platform.
+All of this data stays on your device. It is never sent to us or any third party.
+
+## iCloud Sync
+
+The App includes an optional iCloud sync feature. When enabled, your data is synced across your Apple devices using your personal iCloud account via Apple's CloudKit framework. This sync is handled entirely by Apple's infrastructure. We have no access to your iCloud data. Please refer to [Apple's Privacy Policy](https://www.apple.com/privacy/) for details on how iCloud data is managed.
 
 ## Third-Party Services
 
-Our App uses RevenueCat for processing optional in-app tips. RevenueCat may collect certain information related to these transactions. We encourage you to review RevenueCat's privacy policy for more information on their data practices.
+The App does not integrate any third-party SDKs, analytics services, or advertising networks. The only external services involved are those provided by Apple as part of the iOS platform (e.g., iCloud, the App Store).
+
+## Data Deletion
+
+You can delete all of your data at any time from within the App by navigating to **Settings > Start Fresh > Erase Data**. This permanently removes all drink entries, medication entries, custom drinks, alcohol-free day markers, and resets all preferences to their defaults.
+
+Alternatively, uninstalling the App will remove all locally stored data from your device.
 
 ## User Rights
 
-As we do not collect or store any personal data, there are no specific user rights to access, modify, or delete data. Users are responsible for managing their own data on their devices.
+Since all data is stored locally on your device and we have no access to it, you have full control over your data at all times. You can view, modify, or delete your data directly within the App.
 
 ## Age Restrictions
 
-This App is restricted to users 17 years of age or older, as it revolves around alcohol-related content. By using this App, you confirm that you are at least 17 years old.
+This App is intended for users 17 years of age or older, as it involves alcohol-related content. By using this App, you confirm that you are at least 17 years old.
 
 ## Changes to This Privacy Policy
 
-We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date at the top of this policy.
+We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date at the top of this policy.
 
 ## Contact Us
 
 If you have any questions about this Privacy Policy, please contact us at:
 
 Email: contact@getrewire.app
-
-By using the App, you agree to the collection and use of information in accordance with this policy.
