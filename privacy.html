@@ -7,7 +7,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <script>
     tailwind.config = {
       theme: {
@@ -21,100 +21,137 @@
   </script>
   <style>
     body { font-family: 'Inter', sans-serif; }
+    .link-hover {
+      position: relative;
+      text-decoration: none;
+    }
+    .link-hover::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: currentColor;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+    .link-hover:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+    .link-hover:not(:hover)::after {
+      transform: scaleX(0);
+      transform-origin: right;
+    }
   </style>
 </head>
 <body class="bg-[#f0f0f0] min-h-screen">
-  <div class="max-w-[1440px] mx-auto px-6 md:px-12">
-    <!-- Nav -->
-    <div class="flex items-center gap-[10px] pt-12">
-      <a href="/" class="flex items-center gap-[10px]">
-        <div class="w-9 h-9 rounded-[8px] flex items-center justify-center" style="background: linear-gradient(180deg, #202020 0%, #000 100%);">
-          <svg width="16" height="16" viewBox="0 0 25.75 25.75" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M18.2395 11.802H19.3124C20.1661 11.802 20.9848 12.1411 21.5884 12.7447C22.192 13.3484 22.5312 14.1671 22.5312 15.0207C22.5312 15.8744 22.192 16.6931 21.5884 17.2967C20.9848 17.9004 20.1661 18.2395 19.3124 18.2395H18.2395" stroke="white" stroke-width="1.738" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M9.65625 12.875V19.3125" stroke="white" stroke-width="1.738" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M13.948 12.875V19.3125" stroke="white" stroke-width="1.738" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M15.0208 8.04678C13.9479 8.04678 13.4758 8.58324 11.8021 8.58324C10.1283 8.58324 9.65625 8.04678 8.58333 8.04678C7.51042 8.04678 6.73792 8.58324 5.90104 8.58324C5.18965 8.58324 4.5074 8.30064 4.00438 7.79761C3.50135 7.29459 3.21875 6.61233 3.21875 5.90095C3.21875 5.18956 3.50135 4.50731 4.00438 4.00428C4.5074 3.50125 5.18965 3.21866 5.90104 3.21866C6.73792 3.21866 7.58552 3.75511 8.58333 3.75511C9.58115 3.75511 10.1283 2.14574 11.8021 2.14574C13.4758 2.14574 13.9479 3.75511 15.0208 3.75511C16.0938 3.75511 16.8663 3.21866 17.7031 3.21866C18.4145 3.21866 19.0968 3.50125 19.5998 4.00428C20.1028 4.50731 20.3854 5.18956 20.3854 5.90095C20.3854 6.61233 20.1028 7.29459 19.5998 7.79761C19.0968 8.30064 18.4145 8.58324 17.7031 8.58324C16.8663 8.58324 16.0938 8.04678 15.0208 8.04678Z" stroke="white" stroke-width="1.738" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M5.36449 8.58324V21.4582C5.36449 22.0273 5.59057 22.5731 5.99299 22.9756C6.39541 23.378 6.94121 23.6041 7.51032 23.6041H16.0937C16.6628 23.6041 17.2086 23.378 17.611 22.9756C18.0134 22.5731 18.2395 22.0273 18.2395 21.4582V8.58324" stroke="white" stroke-width="1.738" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <span class="text-[15px] font-medium text-[#202020] tracking-[-0.15px]">ReWire</span>
+  <div class="max-w-[1440px] mx-auto px-5 sm:px-10 pt-4 flex flex-col min-h-screen relative">
+
+    <!-- Nav Bar -->
+    <div class="flex items-center justify-between ml-[18px] mr-[18px]">
+      <!-- App Icon -->
+      <a href="/" class="w-9 h-9 rounded-lg flex items-center justify-center overflow-hidden flex-shrink-0" style="background: linear-gradient(180deg, #202020 0%, #000 100%);">
+        <svg width="14.5" height="14.5" viewBox="0 0 25.75 25.75" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18.2395 11.802H19.3124C20.1661 11.802 20.9848 12.1411 21.5884 12.7447C22.192 13.3484 22.5312 14.1671 22.5312 15.0207C22.5312 15.8744 22.192 16.6931 21.5884 17.2967C20.9848 17.9004 20.1661 18.2395 19.3124 18.2395H18.2395" stroke="white" stroke-width="1.738" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M9.65625 12.875V19.3125" stroke="white" stroke-width="1.738" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M13.948 12.875V19.3125" stroke="white" stroke-width="1.738" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M15.0208 8.04678C13.9479 8.04678 13.4758 8.58324 11.8021 8.58324C10.1283 8.58324 9.65625 8.04678 8.58333 8.04678C7.51042 8.04678 6.73792 8.58324 5.90104 8.58324C5.18965 8.58324 4.5074 8.30064 4.00438 7.79761C3.50135 7.29459 3.21875 6.61233 3.21875 5.90095C3.21875 5.18956 3.50135 4.50731 4.00438 4.00428C4.5074 3.50125 5.18965 3.21866 5.90104 3.21866C6.73792 3.21866 7.58552 3.75511 8.58333 3.75511C9.58115 3.75511 10.1283 2.14574 11.8021 2.14574C13.4758 2.14574 13.9479 3.75511 15.0208 3.75511C16.0938 3.75511 16.8663 3.21866 17.7031 3.21866C18.4145 3.21866 19.0968 3.50125 19.5998 4.00428C20.1028 4.50731 20.3854 5.18956 20.3854 5.90095C20.3854 6.61233 20.1028 7.29459 19.5998 7.79761C19.0968 8.30064 18.4145 8.58324 17.7031 8.58324C16.8663 8.58324 16.0938 8.04678 15.0208 8.04678Z" stroke="white" stroke-width="1.738" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M5.36449 8.58324V21.4582C5.36449 22.0273 5.59057 22.5731 5.99299 22.9756C6.39541 23.378 6.94121 23.6041 7.51032 23.6041H16.0937C16.6628 23.6041 17.2086 23.378 17.611 22.9756C18.0134 22.5731 18.2395 22.0273 18.2395 21.4582V8.58324" stroke="white" stroke-width="1.738" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <!-- Download Button (nav) -->
+      <a href="/" class="inline-flex items-center gap-[10px] h-9 px-[15px] text-[14px] font-medium text-[#202020] tracking-[-0.14px] whitespace-nowrap rounded-lg border border-[#dcdcdc] hover:bg-black/5 transition-colors">
+        <svg width="12" height="15" viewBox="0 0 15.6742 19.2557" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.1754 6.56419C15.0637 6.65084 13.092 7.7619 13.092 10.2324C13.092 13.09 15.601 14.1009 15.6761 14.1259C15.6645 14.1875 15.2775 15.5104 14.3532 16.8583C13.5291 18.0444 12.6683 19.2287 11.3589 19.2287C10.0496 19.2287 9.71258 18.4681 8.20101 18.4681C6.72795 18.4681 6.20419 19.2537 5.00649 19.2537C3.80878 19.2537 2.97308 18.1561 2.01222 16.8082C0.899242 15.2254 0 12.7665 0 10.4327C0 6.68935 2.43392 4.70409 4.82933 4.70409C6.10214 4.70409 7.16313 5.53979 7.96224 5.53979C8.72284 5.53979 9.90899 4.65402 11.357 4.65402C11.9058 4.65402 13.8776 4.70409 15.1754 6.56419ZM10.6696 3.06928C11.2684 2.35874 11.6921 1.37285 11.6921 0.386956C11.6921 0.250241 11.6805 0.1116 11.6555 -8.36119e-05C10.6811 0.0365022 9.52195 0.648834 8.82297 1.4595C8.27418 2.08338 7.76198 3.06928 7.76198 4.06865C7.76198 4.21884 7.78701 4.36904 7.79857 4.41718C7.86018 4.42873 7.96031 4.44221 8.06044 4.44221C8.93465 4.44221 10.0342 3.85684 10.6696 3.06928Z" fill="#202020"/>
+        </svg>
+        Download for iOS
       </a>
     </div>
 
-    <!-- Content -->
-    <div class="max-w-[640px] mt-16 pb-24">
-      <h1 class="text-[32px] md:text-[40px] font-normal text-black leading-tight tracking-[-0.5px]">Privacy Policy</h1>
-      <p class="text-[14px] text-[#4a4a4a] mt-2">Last updated: March 8, 2025</p>
+    <!-- Full-height vertical dashed lines -->
+    <div class="absolute left-5 sm:left-10 top-0 bottom-0 border-l border-dashed border-[#dcdcdc]"></div>
+    <div class="absolute right-5 sm:right-10 top-0 bottom-0 border-l border-dashed border-[#dcdcdc]"></div>
 
-      <div class="mt-12 space-y-10 text-[15px] text-[#4a4a4a] leading-relaxed">
-        <section>
-          <h2 class="text-[18px] font-medium text-black mb-3">Introduction</h2>
-          <p>ReWire ("we," "our," or "us") respects your privacy and is committed to protecting it through our compliance with this policy. This policy describes our practices regarding data collection and usage for our iOS application ReWire - TSM Companion (the "App").</p>
-        </section>
+    <!-- Content Frame with Border -->
+    <div class="border-t border-b border-dashed border-[#dcdcdc] mt-[14px] flex-1 flex flex-col overflow-hidden relative">
 
-        <section>
-          <h2 class="text-[18px] font-medium text-black mb-3">Information Collection</h2>
-          <p>Our App does not collect, transmit, or share any personal data. We have no servers, no analytics, and no tracking of any kind. We do not know who our users are or how they use the App.</p>
-        </section>
+      <!-- Privacy Content -->
+      <div class="max-w-[640px] mx-auto w-full px-6 py-12 sm:py-16">
+        <h1 class="font-normal text-black leading-[1.1] tracking-[-0.03em] text-center" style="font-size: clamp(28px, 5vw, 48px);">Privacy Policy</h1>
+        <p class="text-[14px] text-[#4a4a4a] mt-3 text-center">Last updated: March 8, 2025</p>
 
-        <section>
-          <h2 class="text-[18px] font-medium text-black mb-3">Data Stored on Your Device</h2>
-          <p class="mb-3">The App stores the following data locally on your device using Apple's Core Data framework:</p>
-          <ul class="list-disc pl-5 space-y-1">
-            <li><strong class="text-black">Drink entries</strong> — drink name, emoji, timestamp, ABV, size, standard units, and optional notes</li>
-            <li><strong class="text-black">Medication entries</strong> — medication name, dosage, timestamp, and optional notes</li>
-            <li><strong class="text-black">Custom drinks</strong> — user-created drink presets</li>
-            <li><strong class="text-black">Alcohol-free day markers</strong> — dates marked as alcohol-free</li>
-            <li><strong class="text-black">App preferences</strong> — display settings, country selection, and week start day</li>
-          </ul>
-          <p class="mt-3">All of this data stays on your device. It is never sent to us or any third party.</p>
-        </section>
+        <div class="mt-12 space-y-10 text-[15px] text-[#4a4a4a] leading-relaxed font-light">
+          <section>
+            <h2 class="text-[18px] font-medium text-black mb-3">Introduction</h2>
+            <p>ReWire ("we," "our," or "us") respects your privacy and is committed to protecting it through our compliance with this policy. This policy describes our practices regarding data collection and usage for our iOS application ReWire - TSM Companion (the "App").</p>
+          </section>
 
-        <section>
-          <h2 class="text-[18px] font-medium text-black mb-3">iCloud Sync</h2>
-          <p>The App includes an optional iCloud sync feature. When enabled, your data is synced across your Apple devices using your personal iCloud account via Apple's CloudKit framework. This sync is handled entirely by Apple's infrastructure. We have no access to your iCloud data. Please refer to <a href="https://www.apple.com/privacy/" class="underline hover:text-black">Apple's Privacy Policy</a> for details on how iCloud data is managed.</p>
-        </section>
+          <section>
+            <h2 class="text-[18px] font-medium text-black mb-3">Information Collection</h2>
+            <p>Our App does not collect, transmit, or share any personal data. We have no servers, no analytics, and no tracking of any kind. We do not know who our users are or how they use the App.</p>
+          </section>
 
-        <section>
-          <h2 class="text-[18px] font-medium text-black mb-3">Third-Party Services</h2>
-          <p>The App does not integrate any third-party SDKs, analytics services, or advertising networks. The only external services involved are those provided by Apple as part of the iOS platform (e.g., iCloud, the App Store).</p>
-        </section>
+          <section>
+            <h2 class="text-[18px] font-medium text-black mb-3">Data Stored on Your Device</h2>
+            <p class="mb-3">The App stores the following data locally on your device using Apple's Core Data framework:</p>
+            <ul class="list-disc pl-5 space-y-1">
+              <li><strong class="text-black">Drink entries</strong> — drink name, emoji, timestamp, ABV, size, standard units, and optional notes</li>
+              <li><strong class="text-black">Medication entries</strong> — medication name, dosage, timestamp, and optional notes</li>
+              <li><strong class="text-black">Custom drinks</strong> — user-created drink presets</li>
+              <li><strong class="text-black">Alcohol-free day markers</strong> — dates marked as alcohol-free</li>
+              <li><strong class="text-black">App preferences</strong> — display settings, country selection, and week start day</li>
+            </ul>
+            <p class="mt-3">All of this data stays on your device. It is never sent to us or any third party.</p>
+          </section>
 
-        <section>
-          <h2 class="text-[18px] font-medium text-black mb-3">Data Deletion</h2>
-          <p>You can delete all of your data at any time from within the App by navigating to <strong class="text-black">Settings > Start Fresh > Erase Data</strong>. This permanently removes all drink entries, medication entries, custom drinks, alcohol-free day markers, and resets all preferences to their defaults.</p>
-          <p class="mt-3">Alternatively, uninstalling the App will remove all locally stored data from your device.</p>
-        </section>
+          <section>
+            <h2 class="text-[18px] font-medium text-black mb-3">iCloud Sync</h2>
+            <p>The App includes an optional iCloud sync feature. When enabled, your data is synced across your Apple devices using your personal iCloud account via Apple's CloudKit framework. This sync is handled entirely by Apple's infrastructure. We have no access to your iCloud data. Please refer to <a href="https://www.apple.com/privacy/" class="underline hover:text-black">Apple's Privacy Policy</a> for details on how iCloud data is managed.</p>
+          </section>
 
-        <section>
-          <h2 class="text-[18px] font-medium text-black mb-3">User Rights</h2>
-          <p>Since all data is stored locally on your device and we have no access to it, you have full control over your data at all times. You can view, modify, or delete your data directly within the App.</p>
-        </section>
+          <section>
+            <h2 class="text-[18px] font-medium text-black mb-3">Third-Party Services</h2>
+            <p>The App does not integrate any third-party SDKs, analytics services, or advertising networks. The only external services involved are those provided by Apple as part of the iOS platform (e.g., iCloud, the App Store).</p>
+          </section>
 
-        <section>
-          <h2 class="text-[18px] font-medium text-black mb-3">Age Restrictions</h2>
-          <p>This App is intended for users 17 years of age or older, as it involves alcohol-related content. By using this App, you confirm that you are at least 17 years old.</p>
-        </section>
+          <section>
+            <h2 class="text-[18px] font-medium text-black mb-3">Data Deletion</h2>
+            <p>You can delete all of your data at any time from within the App by navigating to <strong class="text-black">Settings > Start Fresh > Erase Data</strong>. This permanently removes all drink entries, medication entries, custom drinks, alcohol-free day markers, and resets all preferences to their defaults.</p>
+            <p class="mt-3">Alternatively, uninstalling the App will remove all locally stored data from your device.</p>
+          </section>
 
-        <section>
-          <h2 class="text-[18px] font-medium text-black mb-3">Changes to This Privacy Policy</h2>
-          <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date at the top of this policy.</p>
-        </section>
+          <section>
+            <h2 class="text-[18px] font-medium text-black mb-3">User Rights</h2>
+            <p>Since all data is stored locally on your device and we have no access to it, you have full control over your data at all times. You can view, modify, or delete your data directly within the App.</p>
+          </section>
 
-        <section>
-          <h2 class="text-[18px] font-medium text-black mb-3">Contact Us</h2>
-          <p>If you have any questions about this Privacy Policy, please contact us at: <a href="mailto:contact@getrewire.app" class="underline hover:text-black">contact@getrewire.app</a></p>
-        </section>
+          <section>
+            <h2 class="text-[18px] font-medium text-black mb-3">Age Restrictions</h2>
+            <p>This App is intended for users 17 years of age or older, as it involves alcohol-related content. By using this App, you confirm that you are at least 17 years old.</p>
+          </section>
+
+          <section>
+            <h2 class="text-[18px] font-medium text-black mb-3">Changes to This Privacy Policy</h2>
+            <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date at the top of this policy.</p>
+          </section>
+
+          <section>
+            <h2 class="text-[18px] font-medium text-black mb-3">Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy, please contact us at: <a href="mailto:contact@getrewire.app" class="underline hover:text-black">contact@getrewire.app</a></p>
+          </section>
+        </div>
       </div>
     </div>
 
     <!-- Footer -->
-    <div class="border-t border-[#d8d8d8]"></div>
-    <div class="flex items-center justify-between py-[22px]">
-      <span class="text-[15px] text-black tracking-[-0.15px]">&copy; 2026 ReWire</span>
-      <div class="flex items-center gap-[24px]">
-        <a href="mailto:contact@getrewire.app" class="text-[15px] text-black tracking-[-0.15px] hover:underline">Contact</a>
-        <a href="/privacy.html" class="text-[15px] text-black tracking-[-0.15px] hover:underline">Privacy</a>
+    <div class="flex items-center justify-between pt-[14px] sm:pt-[22px] pb-[22px] ml-[18px] mr-[18px]">
+      <span class="text-[13px] sm:text-[15px] text-black tracking-[-0.15px]">&copy; 2026 ReWire - TSM Drink Log</span>
+      <div class="flex items-center gap-4 sm:gap-6">
+        <a href="mailto:contact@getrewire.app" class="text-[13px] sm:text-[15px] text-black tracking-[-0.15px] link-hover">Contact</a>
+        <a href="privacy.html" class="text-[13px] sm:text-[15px] text-black tracking-[-0.15px] link-hover">Privacy</a>
       </div>
     </div>
   </div>
