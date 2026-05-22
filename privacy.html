@@ -14,49 +14,10 @@
   <meta name="twitter:title" content="Privacy Policy - ReWire">
   <meta name="twitter:description" content="Privacy policy for ReWire - TSM Drink Log. Your data stays on your device.">
   <meta name="twitter:image" content="https://getrewire.app/assets/social-share.png">
-  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            inter: ['Inter', 'sans-serif'],
-          },
-        },
-      },
-    }
-  </script>
-  <style>
-    body { font-family: 'Inter', sans-serif; }
-    ::selection { background-color: #202020; color: #fff; }
-    .link-hover {
-      position: relative;
-      text-decoration: none;
-    }
-    .link-hover::after {
-      content: '';
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background-color: currentColor;
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.3s ease;
-    }
-    .link-hover:hover::after {
-      transform: scaleX(1);
-      transform-origin: left;
-    }
-    .link-hover:not(:hover)::after {
-      transform: scaleX(0);
-      transform-origin: right;
-    }
-  </style>
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body class="bg-[#f0f0f0] min-h-screen">
   <div class="max-w-[1440px] mx-auto px-5 sm:px-10 pt-4 flex flex-col min-h-screen relative">
