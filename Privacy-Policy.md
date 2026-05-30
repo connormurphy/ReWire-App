@@ -1,6 +1,6 @@
 # Privacy Policy for ReWire - TSM Companion
 
-**Last updated:** March 8, 2025
+**Last updated:** March 8, 2026
 
 ## Introduction
 
