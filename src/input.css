@@ -78,10 +78,14 @@
   }
 
   @media (max-width: 640px) {
+    .tooltip-trigger {
+      position: static;
+    }
     .tooltip-content {
-      width: 260px;
-      left: auto;
+      left: 0;
       right: 0;
+      width: auto;
+      max-width: none;
     }
   }
 
